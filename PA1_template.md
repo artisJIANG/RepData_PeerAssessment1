@@ -1,5 +1,4 @@
 # Reproducible Research-033: Peer Assessment 1
-
 ==========================================
 By Artis JIANG on 2015/10/14
 
