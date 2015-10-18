@@ -120,22 +120,22 @@ ggplot(newData, aes(date, steps)) + geom_bar(stat="identity", colour="steelblue"
 - Mean of total number of steps taken per day:
 ```{r}
 newTotalSteps <- aggregate(newData$steps, list(Date = newData$date), FUN = "sum")$x
-newMean <- mean(newTotalSteps)
-newMean
+new_mean <- mean(newTotalSteps)
+new_mean
 ```
 
 - Median of total number of steps taken per day:
 ```{r}
-newMedian <- median(newTotalSteps)
-newMedian
+new_median <- median(newTotalSteps)
+new_median
 ```
 
-- Compare them with the two before imputing missing data:
+- Compare them with the two prior imputing missing data:
 ```{r}
-oldMean <- mean(totalSteps)
-oldMedian <- median(totalSteps)
-newMean - oldMean
-newMedian - oldMedian
+old_mean <- mean(totalSteps)
+old_median <- median(totalSteps)
+new_mean - old_mean
+new_median - old_median
 ```
 
 Per above comparison, after imputing the missing data, the new mean of total steps taken per day is the same as that of the old mean; the new median of total steps taken per day is greater than that of the old median.

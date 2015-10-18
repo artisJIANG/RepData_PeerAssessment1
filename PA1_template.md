@@ -182,8 +182,8 @@ ggplot(newData, aes(date, steps)) + geom_bar(stat="identity", colour="steelblue"
 
 ```r
 newTotalSteps <- aggregate(newData$steps, list(Date = newData$date), FUN = "sum")$x
-newMean <- mean(newTotalSteps)
-newMean
+new_mean <- mean(newTotalSteps)
+new_mean
 ```
 
 ```
@@ -193,20 +193,20 @@ newMean
 - Median of total number of steps taken per day:
 
 ```r
-newMedian <- median(newTotalSteps)
-newMedian
+new_median <- median(newTotalSteps)
+new_median
 ```
 
 ```
 ## [1] 10765
 ```
 
-- Compare them with the two before imputing missing data:
+- Compare them with the two prior imputing missing data:
 
 ```r
-oldMean <- mean(totalSteps)
-oldMedian <- median(totalSteps)
-newMean - oldMean
+old_mean <- mean(totalSteps)
+old_median <- median(totalSteps)
+new_mean - old_mean
 ```
 
 ```
@@ -214,7 +214,7 @@ newMean - oldMean
 ```
 
 ```r
-newMedian - oldMedian
+new_median - old_median
 ```
 
 ```

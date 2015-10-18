@@ -167,23 +167,23 @@ for (i in 1:nrow(newData)) {
 <li>Mean of total number of steps taken per day:</li>
 </ul>
 <pre class="r"><code>newTotalSteps &lt;- aggregate(newData$steps, list(Date = newData$date), FUN = &quot;sum&quot;)$x
-newMean &lt;- mean(newTotalSteps)
-newMean</code></pre>
+new_mean &lt;- mean(newTotalSteps)
+new_mean</code></pre>
 <pre><code>## [1] 10766.19</code></pre>
 <ul>
 <li>Median of total number of steps taken per day:</li>
 </ul>
-<pre class="r"><code>newMedian &lt;- median(newTotalSteps)
-newMedian</code></pre>
+<pre class="r"><code>new_median &lt;- median(newTotalSteps)
+new_median</code></pre>
 <pre><code>## [1] 10765</code></pre>
 <ul>
-<li>Compare them with the two before imputing missing data:</li>
+<li>Compare them with the two prior imputing missing data:</li>
 </ul>
-<pre class="r"><code>oldMean &lt;- mean(totalSteps)
-oldMedian &lt;- median(totalSteps)
-newMean - oldMean</code></pre>
+<pre class="r"><code>old_mean &lt;- mean(totalSteps)
+old_median &lt;- median(totalSteps)
+new_mean - old_mean</code></pre>
 <pre><code>## [1] 0</code></pre>
-<pre class="r"><code>newMedian - oldMedian</code></pre>
+<pre class="r"><code>new_median - old_median</code></pre>
 <pre><code>## [1] 0</code></pre>
 <p>Per above comparison, after imputing the missing data, the new mean of total steps taken per day is the same as that of the old mean; the new median of total steps taken per day is greater than that of the old median.</p>
 <p><br><br><br></p>
