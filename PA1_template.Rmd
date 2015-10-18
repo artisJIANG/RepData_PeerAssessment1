@@ -72,7 +72,7 @@ cat( sprintf("median of the total number of steps taken per day = %9.0f steps\n"
 avgSteps <- aggregate( data_noNA$steps, list(interval = as.numeric(as.character(data_noNA$interval))), FUN = "mean")
 names(avgSteps)[2] <- "meanOfSteps"
 
-ggplot( data=avgSteps, aes(interval, meanOfSteps)) + geom_line(color = "steelblue", size = 0.8) + labs(title = "Time Series Plot of the 5-minute Interval", x="5-minute intervals", y="Average Number of Steps Taken")
+ggplot( data=avgSteps, aes(interval, meanOfSteps)) + geom_line(color = "blue", size = 0.8) + labs(title = "Time Series Plot of the 5-minute Interval", x="5-minute intervals", y="Average Number of Steps Taken")
 ```
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
@@ -114,7 +114,7 @@ head(newData)
 4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 ```{r}
 
-ggplot(newData, aes(date, steps)) + geom_bar(stat="identity", colour="steelblue", fill="steelblue", width=0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day (no missing data)", x = "Date", y = "Total number of steps")
+ggplot(newData, aes(date, steps)) + geom_bar(stat="identity", colour="steelblue", fill="yellow", width=0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day (no missing data)", x = "Date", y = "Total number of steps")
 ```
 
 - Mean of total number of steps taken per day:
